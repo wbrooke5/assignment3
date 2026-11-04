@@ -1,4 +1,6 @@
 #ASSIGNMENT #3
+# There is probably a way easier or at least shorter way for this code, but I am happy if y'all are with it. The model will be a dice roll with an equation at the end to determin comabt and the hero stats are our visual
+# Also, we don't have debug, but have the input fallbacks as our debug type mechanism
 
 import random
 
