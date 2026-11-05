@@ -114,6 +114,7 @@ if stats=="stats":
     plt.axhline(y=10, color="black", linestyle="--", label="Success")
     plt.axhline(y=0, color="black")
     plt.legend()
+    plt.savefig("stats.png")
     plt.show()
     print(f'With you {weapon} and {armor} It’s time to set forth on an adventure; kill the monster and take the treaasure. Soon they will tell stories about {name} the... Soon to be titled!')
 else:
@@ -150,6 +151,7 @@ else:
         plt.axhline(y=10, color="black", linestyle="--", label="Success")
         plt.axhline(y=0, color="black")
         plt.legend()
+        plt.savefig("stats.png")
         plt.show()
         print(f'With you {weapon} and {armor} It’s time to set forth on an adventure; kill the monster and take the treaasure. Soon they will tell stories about {name} the... Soon to be titled!')
 
