@@ -199,22 +199,59 @@ tff = ["the super dead", "the knife at a gunfight", "the food"]
 trf = ["the Coward", "the Slow", "the Oops Too Late"]
 
 ############################################################################################################################################
+result = 0
+class dice:
+    #initilizes: runs when new dice object is created
+    def __init__(self):
+        #outcome variables store results of each roll
+        self.outcome=0
+    #method for fair die roll
+    def roll(self):
+        #gen random int1-21
+        self.outcome=np.random.randint(1,21)
 
-############################################################################################################################################
-#FOR LATER IN CODE JUST MAKING NOW Turn into a if then for the combat
-print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} turned around and ran! As the {monster} gave up, the Hero did say! Oh my {name} {title} is so lucky to have run away!') 
+print(f'QUICK! THE {monster} AND ONLY THING THAT STANDS BETWEEN YOU AND THE TREASURE HAS NOTICED YOU!')
+print("What will you do, Hero?! SNEAK around the monster by nightfall? FIGHT the monster with your weapon? or RUN away to safety")
+act = input("type SNEAK, FIGHT, or RUN: ")
+#############################################################
+if act == "SNEAK":
+    print(f'You wait for the {monster} to fall asleep before sneaking against the cave walls as you make your way towards the treasure.')
+   	roll = input("roll for sneak: ")
+    sk_die = dice()	
+    sk_die.roll()
+    result = sk_die.roll() + sk1 + sk2
+    If result =>10:
+		title = random.choice(list(tsw)) 
+        print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} did sneak, as the {monster} did sleep. And {name} {title} left with the treasure without a peep!')
+    else: 
+        title = random.choice(list(tsf))
+        print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} did sneak, as the {monster} caught on. And {name} {title} is long gone!')
+elif act == "FIGHT":
+    print(f'You charge into action with you {weapon} drawn and {armor} secured.')
+    roll = input("roll for fight: ")
+    ft_die = dice()	
+    ft_die.roll()
+    result = ft_die.roll() + ft1 + ft2
+    If result =>10:
+	    title = random.choice(list(tfw)) 
+        print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} lunged and fought! As the {monster} head is servered on a tray, we all cheer and say. Oh {name} {title} was there to slay!')
+    else: 
+        title = random.choice(list(tff))
+        print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} lunged and fought! As the {monster} attacked, the hero did say! Oh no, {name} {title} should have covered their back!')
+elif act == "RUN":
+    print(f'You turn on you heals, seath your {weapon} and run as fast as you can away from the {monster}.')
+    roll = input("roll for run: ")
+    rn_die = dice()	
+    rn_die.roll()
+    result = rn_die.roll() + rn1 + rn2
+    If result => 10:
+        title = random.choice(list(trw))
+        print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} turned around and ran! As the {monster} gave up, the Hero did say! Oh my {name} {title} is so lucky to have run away!') 
+    else: 
+        title = random.choice(list(trf)) 
+        print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} turned around and ran! As the {monster} caught up the hero did say! Oh my {name} {title} will seen!') 
+else:
+    print(f'You freeze in fear as the {monster} eyes you down hungery for wimpy hero.') 
 
-print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} turned around and ran! As the {monster} caught up the hero did say! Oh my {name} {title} will seen!') 
-
-print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} lunged and fought! As the {monster} attacked, the hero did say! Oh no, {name} {title} should have covered their back!')
-
-print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} lunged and fought! As the {monster} head is servered on a tray, we all cheer and say. Oh {name} {title} was there to slay!')
-
-print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} did sneak, as the {monster} did sleep. And {name} {title} left with the treasure without a peep!')
-
-print(f'There once was a hero named {name} {title} who came riding to glory from {home}. And the Hero did strut {armor} and brandish a {weapon} as the {monster} said I think it is high time that you lie down and bleed. So {name} {title} did sneak, as the {monster} caught on. And {name} {title} is long gone!')
-
-######################################################################################################################
-#TODO
-    #dice and outcomes with random titles for wins and fails
-    #results
+#########################################################################
+print(“THE END”) 
